@@ -5,22 +5,30 @@ html{
 
 body {
     width: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
+    font-family: 'Times New Roman', Times, serif;
+    background-size: cover;
+    background-image: url("./img/fundo.png");
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
     height: 100%;
     padding: 0;
     margin: 0;
 }
 
+#video{
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
 #imagem{
     display: none;
-    margin-top: 150px;
-    margin-right: 20px;
+    margin-top: 200px;
+    margin-right: 5px;
     background-color: #121212;
     width: 300px;
     box-shadow: 0 4px 10px rgb(255, 255, 255, 0.3);
@@ -42,7 +50,7 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     position: absolute;
     top: 3%;
-    left: 8%;
+    left: 10%;
 }
 
 .musica-info {
@@ -117,10 +125,56 @@ body {
 }
 
 #textoMvd{
+    width: 300px;
     display: none;
     margin-left: 15px;
 }
 
 #crono{
+    width: 330px;
+    padding: 5px;
+    margin-top: 10px;
+    border: #141318 2px solid;
+    border-radius: 5px;
     display: none;
+    background-color: #333;
+}
+
+#click-here{
+    font-size: large;
+    padding: 5px;
+    width: 150px;
+    height: 50px;
+    border:  2px white solid;
+    background-color: #a9a9a9;
+    box-shadow: 0 8px 12px rgb(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+#heart-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: fall linear;
+}
+
+@keyframes fall {
+    0% {
+    transform: translateY(0) rotate(0deg);
+    pacity: 1;
+    }
+    100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+    }
 }

@@ -9,15 +9,17 @@ const img =  document.getElementById('imagem');
 const crono = document.getElementById('crono');
 const texto = document.getElementById('textoMvd');
 const botao = document.getElementById('click-here');
+const heart = document.getElementById('heart-container')
 
 let isPlaying = false;
 
-function clickInicial(){
-    player.document.style.display = 'block';
-    img.document.style.display = 'block';
-    crono.document.style.display =  'block';
-    texto.document.style.display = 'block';
-    botao.document.style.display =  'none';
+function clickInicial() {
+    heart.style.display = 'block'
+    player.style.display = 'block';
+    img.style.display = 'block';
+    crono.style.display =  'block';
+    texto.style.display = 'block';
+    botao.style.display =  'none';
 
 }
 
@@ -44,9 +46,9 @@ musica.ontimeupdate = () => {
 // Função para tocar ou pausar a música
 playPauseBtn.onclick = () => {
     if (!isPlaying) {
-      musica.play();
+    musica.play();
     } else {
-      musica.pause();
+    musica.pause();
     }
 };
 
@@ -68,3 +70,23 @@ barraProgresso.onclick = (e) => {
     const clickPercent = clickX / width;
     musica.currentTime = musica.duration * clickPercent;
 };
+
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerText = '❤️';
+
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 20 +10) + 'px';
+    heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+
+    document.getElementById('heart-container').appendChild(heart);
+
+    setTimeout(() => {
+    heart.remove();
+    }, 5000); // Remove após 5 segundos
+}
+
+  // Criar um coração a cada 300ms
+setInterval(createHeart, 300);
+
