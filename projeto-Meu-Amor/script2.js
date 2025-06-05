@@ -1,8 +1,8 @@
 // Variáveis para guardar o tempo
 let meses = 1;
-let dias = 15;
-let horas = 23;
-let minutos = 0;
+let dias = 27;
+let horas = 14;
+let minutos = 23;
 let segundos = 0;
 let p = document.getElementById("timer");
 
