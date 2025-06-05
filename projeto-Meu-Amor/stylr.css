@@ -178,3 +178,37 @@ body {
     opacity: 0;
     }
 }
+
+.mvd{
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 8px;
+}
+
+#myLove1{
+    top: 5%;
+    left: 5%;
+    transform: rotateX('10deg');
+}
+
+#myLove2{
+    top: 9%;
+    left: 60%;
+}
+
+#myLove3{
+    top: 80%;
+    left: 3%;
+}
+
+#myLove4{
+    top: 70%;
+    left: 55%;
+}
+
+#myLove5{
+    top: 30%;
+    left: 12%;
+}

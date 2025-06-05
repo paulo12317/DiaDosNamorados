@@ -9,11 +9,19 @@ const img =  document.getElementById('imagem');
 const crono = document.getElementById('crono');
 const texto = document.getElementById('textoMvd');
 const botao = document.getElementById('click-here');
-const heart = document.getElementById('heart-container')
+const heart = document.getElementById('heart-container');
+const myLove1 = document.getElementById('myLove1');
+const myLove2 = document.getElementById('myLove2');
+const myLove3 = document.getElementById('myLove3');
+const myLove4 = document.getElementById('myLove4');
 
 let isPlaying = false;
 
 function clickInicial() {
+    myLove1.style.display = 'none'
+    myLove2.style.display = 'none'
+    myLove3.style.display = 'none'
+    myLove4.style.display = 'none'
     heart.style.display = 'block'
     player.style.display = 'block';
     img.style.display = 'block';
