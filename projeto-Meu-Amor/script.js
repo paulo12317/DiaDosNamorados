@@ -14,10 +14,12 @@ const myLove1 = document.getElementById('myLove1');
 const myLove2 = document.getElementById('myLove2');
 const myLove3 = document.getElementById('myLove3');
 const myLove4 = document.getElementById('myLove4');
+const myLove5 = document.getElementById('myLove5');
 
 let isPlaying = false;
 
 function clickInicial() {
+    myLove5.style.display = 'none'
     myLove1.style.display = 'none'
     myLove2.style.display = 'none'
     myLove3.style.display = 'none'
